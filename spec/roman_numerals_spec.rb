@@ -24,4 +24,8 @@ describe RomanNumerals do
   it "should be able to convert 1999 to MCMXCIX" do
     expect(RomanNumerals.convert(1999)).to eq("MCMXCIX")
   end
+  
+  it "should be able to convert 0 to 'nulla'" do
+    expect(RomanNumerals.convert(0)).to eq("nulla")
+  end
 end
