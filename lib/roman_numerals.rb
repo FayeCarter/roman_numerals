@@ -16,11 +16,15 @@ class RomanNumerals
   }
 
   def self.convert(number)
-    roman_numeral = ""
-    roman_numeral = "nulla" if number == 0
-    ROMAN_NUMERALS.each do |k,v|
-      (number / k).times { roman_numeral << v; number -= k }
+    if number < 0
+      "Cannot convert negative Integers"
+    else
+      roman_numeral = ""
+      roman_numeral = "nulla" if number == 0
+      ROMAN_NUMERALS.each do |k,v|
+        (number / k).times { roman_numeral << v; number -= k }
+      end
+      roman_numeral
     end
-    roman_numeral
   end
 end

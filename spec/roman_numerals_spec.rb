@@ -28,4 +28,8 @@ describe RomanNumerals do
   it "should be able to convert 0 to 'nulla'" do
     expect(RomanNumerals.convert(0)).to eq("nulla")
   end
+
+  it "should reject negative integers" do
+    expect(RomanNumerals.convert(-50)).to eq("Cannot convert negative Integers")
+  end
 end
